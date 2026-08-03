@@ -1,0 +1,11 @@
+ClassId,SignName,Folder
+0,Glavna cesta,glavna_cesta
+1,Ograničenje brzine 80,ogranicenje_brzine_80
+2,Pješački prijelaz,pjesacki_prijelaz
+3,Radovi na cesti,radovi_na_cesti
+4,Semafori,semafori
+5,Sporedna cesta,sporedna_cesta
+6,Stop,stop
+7,Suženje ceste,suzenje_ceste
+8,Zabrana zaustavljanja i parkiranja,zabrana_zaustavljanja_i_parkiranja
+9,Zabranjen smjer,zabranjen_smjer
