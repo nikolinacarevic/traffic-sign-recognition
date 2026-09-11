@@ -15,7 +15,7 @@ from model import TrafficSignCNN
 
 
 class MapTransform(Dataset):
-    """Dodavanje transformacija na subset."""
+    # Dodavanje transformacija na subset.
 
     def __init__(self, subset: Dataset, transform) -> None:
         self.subset = subset
@@ -52,7 +52,7 @@ def eval_transform():
 
 
 def load_signnames(project_dir: Path, class_folders: list[str]) -> list[str]:
-    """Učitaj prikazna imena iz signnames.csv; redoslijed mora odgovarati folderima."""
+    # Učitaj prikazna imena iz signnames.csv; redoslijed mora odgovarati folderima.
     path = project_dir / "signnames.csv"
     by_folder: dict[str, str] = {}
     with open(path, newline="", encoding="utf-8") as f:
@@ -70,7 +70,7 @@ def load_signnames(project_dir: Path, class_folders: list[str]) -> list[str]:
 
 
 def run_epoch(model, loader, criterion, optimizer, device, train: bool):
-    """Treniranje ili evaluacija modela na jednom epochu."""
+    # Treniranje ili evaluacija modela na jednom epochu.
     if train:
         model.train()
     else:

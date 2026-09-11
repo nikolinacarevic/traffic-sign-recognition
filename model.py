@@ -3,7 +3,7 @@ from __future__ import annotations
 import torch
 import torch.nn as nn
 
-" ulaz slika 3x32x32 "
+# Ulaz je RGB slika dimenzija 3 × 32 × 32
 class TrafficSignCNN(nn.Module):
 
     def __init__(self, num_classes: int = 10) -> None:
@@ -23,7 +23,7 @@ class TrafficSignCNN(nn.Module):
             nn.ReLU(inplace=True),
             nn.MaxPool2d(2),
         )
-        " izlaz iz features: 128x4x4 "
+        # izlaz iz features: 128x4x4
         
         self.classifier = nn.Sequential(
             nn.Flatten(),
@@ -34,7 +34,7 @@ class TrafficSignCNN(nn.Module):
         )
         # izlaz: num_classes (broj klasa u dataset/ mapi)
 
-    " forward-> metoda koja prolazi kroz features i classifier "
+    # forward-> metoda koja prolazi kroz features i classifier
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.features(x)
         return self.classifier(x)
